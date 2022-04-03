@@ -1,0 +1,57 @@
+{
+  "format": 1,
+  "restore": {
+    "H:\\MyGodotSpace\\projects\\PVZ_GD\\PVZ_gd_frame.csproj": {}
+  },
+  "projects": {
+    "H:\\MyGodotSpace\\projects\\PVZ_GD\\PVZ_gd_frame.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "H:\\MyGodotSpace\\projects\\PVZ_GD\\PVZ_gd_frame.csproj",
+        "projectName": "PVZ_gd_frame",
+        "projectPath": "H:\\MyGodotSpace\\projects\\PVZ_GD\\PVZ_gd_frame.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "H:\\MyGodotSpace\\projects\\PVZ_GD\\.mono\\temp\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "targetAlias": "net472",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net472",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

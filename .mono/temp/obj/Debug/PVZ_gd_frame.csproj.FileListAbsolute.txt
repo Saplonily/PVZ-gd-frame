@@ -1,0 +1,11 @@
+H:\MyGodotSpace\projects\PVZ_GD\.mono\temp\bin\Debug\PVZ_gd_frame.dll
+H:\MyGodotSpace\projects\PVZ_GD\.mono\temp\bin\Debug\PVZ_gd_frame.pdb
+H:\MyGodotSpace\projects\PVZ_GD\.mono\temp\obj\Debug\PVZ_gd_frame.csproj.AssemblyReference.cache
+H:\MyGodotSpace\projects\PVZ_GD\.mono\temp\obj\Debug\PVZ_gd_frame.GeneratedMSBuildEditorConfig.editorconfig
+H:\MyGodotSpace\projects\PVZ_GD\.mono\temp\obj\Debug\PVZ_gd_frame.AssemblyInfoInputs.cache
+H:\MyGodotSpace\projects\PVZ_GD\.mono\temp\obj\Debug\PVZ_gd_frame.AssemblyInfo.cs
+H:\MyGodotSpace\projects\PVZ_GD\.mono\temp\obj\Debug\PVZ_gd_frame.csproj.CoreCompileInputs.cache
+H:\MyGodotSpace\projects\PVZ_GD\.mono\temp\obj\Debug\PVZ_gd_frame.dll
+H:\MyGodotSpace\projects\PVZ_GD\.mono\temp\obj\Debug\PVZ_gd_frame.pdb
+H:\MyGodotSpace\projects\PVZ_GD\.mono\temp\bin\Debug\Newtonsoft.Json.dll
+H:\MyGodotSpace\projects\PVZ_GD\.mono\temp\obj\Debug\PVZ_gd_frame.csproj.CopyComplete

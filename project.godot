@@ -8,21 +8,15 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "Node2D",
-"class": "mBoard",
-"language": "GDScript",
-"path": "res://pvz_gd_frame/mBoard.gd"
-} ]
-_global_script_class_icons={
-"mBoard": "res://icon.png"
-}
-
 [application]
 
 config/name="PVZ_gd_frame"
 run/main_scene="res://instance/MainScene.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+game="*res://pvz_gd_frame/Game.cs"
 
 [physics]
 

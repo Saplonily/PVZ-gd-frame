@@ -1,0 +1,28 @@
+Register的Registed储存了所有的注册类型,格式如下:
+registed_dictionary:
+{
+    "grid_type":
+    [
+        {"name":"normal"},
+        {"name":"water"},
+        {"name":"lava"}
+    ]
+    "party_none":
+    [
+        {"name":"coin","value":"10"},
+        {"name":"gold_coin","value":"50"}
+    ]
+    "party_a":
+    [
+
+    ]
+    "party_b":
+    [
+        
+    ]
+
+
+}
+
+
+
