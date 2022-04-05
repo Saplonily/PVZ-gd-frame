@@ -4,15 +4,15 @@ using Godot;
 //^ 注 : 想加入按键缓冲区的可接收玩家输入的物体会自己连接这个节点
 namespace PVZGDFrame
 {
-	class PlayerProcesser:Node
+
+	class PlayerProcesser : Node
 	{
 		//按键缓冲区
 		//TODO
-		object process_buffer = null;
-
+		object[] process_buffer = null;
 		public override void _Ready()
 		{
-
+			
 		}
 		public override void _Process(float delta)
 		{

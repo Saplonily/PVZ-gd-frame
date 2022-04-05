@@ -16,7 +16,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-game="*res://pvz_gd_frame/Game.cs"
+Game="res://pvz_gd_frame/Game.cs"
 
 [physics]
 

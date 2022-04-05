@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"godot_tools.scene_file_config": "h:\\MyGodotSpace\\projects\\PVZ_GD\\pvz_gd_frame\\scenes\\GridNormal.tscn"
+	}
+}

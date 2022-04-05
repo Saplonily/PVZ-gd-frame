@@ -1,28 +1,57 @@
 Register的Registed储存了所有的注册类型,格式如下:
-registed_dictionary:
+RegistedDictionary:
 {
-    "grid_type":
+    "GridType":
     [
         {"name":"normal"},
         {"name":"water"},
         {"name":"lava"}
     ]
-    "party_none":
+    "Weapon":
     [
-        {"name":"coin","value":"10"},
-        {"name":"gold_coin","value":"50"}
+        {
+            "Name":"Dispener","HP":200,"Attributes":[
+                {"Name":"Attackable}
+            ]
+        },
+        {
+            "Name":"Furnace","HP":200,"Attributes":[
+                {"Name":"Produceable"}
+            ]
+        },
+        {
+            "Name":"Obsidian","HP":8000,"Attributes":[
+                {"Name":"Hard"},
+                {"Name":"MuiltiHP","Includes":[{"Name":"Ultimate","Value":16000},{}]}
+            ]
+        },
+        {
+            "Name":"HeavyPlate","HP":200,"Attributes":[
+                {"Name":"Ashes","Level":1}
+            ]
+        },
+        {
+            "Name":"RedstoneBlock","HP":500,"Attributes":[
+                {"Name":"PriceIncrease","PriceType":0}
+            ]
+        }
     ]
-    "party_a":
+    "Enemies":
     [
-
+        {
+            "Name":"NormalZombie","HP":200,"Attributes":[]
+        },
+        {
+            "Name":
+        }
     ]
-    "party_b":
-    [
-        
     ]
+    
 
 
 }
-
-
+关于Party,被填写在Parties数组里的注册类型会被视为一个Party
+后续你可以使用这个字符串作为Party辨别
+Party内部填写具体被注册的东西, 见上
+注意如果未被注册的东西请求了值那么会根据内部设置返回错误代码或者是默认值
 

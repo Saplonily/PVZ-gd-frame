@@ -31,14 +31,13 @@ namespace PVZGDFrame
         public int Regist(String type, String name, StringDictionary content)
         {
             StringDictionary dic = new StringDictionary();
-            dic.Add("name", name);
+            dic.Add("Name", name);
 			dic.Union(content).ToDictionary(k => k.Key, v => v.Value);
             Debug.Out<String,String>(dic);
 			RegistedDictionary[type].Add(dic);
 			return RegistedDictionary[type].Count - 1;
         }
         #region 格子相关
-
         //注册格子类型
         public void DoRegistGridTypeVanilla()
 		{
@@ -59,6 +58,7 @@ namespace PVZGDFrame
 			RegistedDictionary.Add(name, new ArrayList());
 		}
 		#endregion
+
 		public void PrintAllRegisted()
 		{
 			Debug.Out<String,ArrayList>(RegistedDictionary);

@@ -17,11 +17,25 @@ namespace PVZGDFrame
 		[Signal]
 		delegate void OffReadyPlace();
 		//可用状态
-		bool AvailableType = true;
-		public int Type;
-		public Area2D Area;
-		public Sprite SprPlaceable;
-		public Sprite SprUnplaceable;
+		bool availableType = true;
+		public bool AvilableType
+		{
+			get;
+			private set;
+		}
+		int type;
+		public int Type
+		{
+			get{return type;}
+			private set
+			{
+				//TODO HERE
+				type = value;
+			}
+		}
+		private Area2D Area;
+		private Sprite SprPlaceable;
+		private Sprite SprUnplaceable;
 
 		public override void _Ready()
 		{
@@ -36,7 +50,7 @@ namespace PVZGDFrame
 			_a = Area.Connect("mouse_exited",this,"MouseExited");
 
 		}
-		public void MouseEntered()
+		private void MouseEntered()
 		{
 			if (Type==Register.GridType.Normal)
 			{
@@ -44,8 +58,7 @@ namespace PVZGDFrame
 				SprPlaceable.Visible = true;
 			}
 		}
-
-		public void MouseExited()
+		private void MouseExited()
 		{
 			EmitSignal("OffReadyPlace");
 			SprPlaceable.Visible = false;
