@@ -18,6 +18,21 @@ config/icon="res://icon.png"
 
 Game="res://pvz_gd_frame/Game.cs"
 
+[layer_names]
+
+2d_physics/layer_1="Background"
+2d_physics/layer_2="Ground"
+2d_physics/layer_3="Entities"
+2d_physics/layer_4="UI"
+2d_physics/layer_5="PartyPositive"
+2d_physics/layer_6="PartyNegative"
+2d_physics/layer_7="PartyMiddle"
+2d_physics/layer_33="erterwtewte"
+
+[locale]
+
+locale_filter=[ 0, [  ] ]
+
 [physics]
 
 common/enable_pause_aware_picking=true

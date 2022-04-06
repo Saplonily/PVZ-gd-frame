@@ -10,7 +10,7 @@ using System.Linq;
 namespace PVZGDFrame
 {
 	using StringDictionary = Dictionary<String, String>;
-    class Register
+    public class Register
     {
         //注册总列表
         public Dictionary<String, ArrayList> RegistedDictionary = new Dictionary<string, ArrayList>();
@@ -63,11 +63,19 @@ namespace PVZGDFrame
 		{
 			Debug.Out<String,ArrayList>(RegistedDictionary);
 		}
-		public static class GridType
+		public class GridType
 		{
+			public int type = Normal;
 			static public int Normal;
 			static public int Water;
 			static public int Lava;
+		}
+		public class HurtType
+		{
+			public int type = Normal;
+			static public int Normal;
+			static public int Fire;
+			static public int Watering;
 		}
     }
 }
