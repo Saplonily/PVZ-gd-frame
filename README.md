@@ -1,2 +1,2 @@
 # PVZ-gd-frame
-plants vs zombie godot frame, using gdscript
+plants vs zombie godot frame, using mono
