@@ -9,7 +9,7 @@ using System.Linq;
 
 namespace PVZGDFrame
 {
-	using StringDictionary = Dictionary<String, String>;
+    using StringDictionary = Dictionary<String, String>;
     public class Register
     {
         //注册总列表
@@ -20,11 +20,11 @@ namespace PVZGDFrame
             DoRegistGridTypeVanilla();
             //这里会放置一个函数API用于注册mod物品
             //注册成功返回一个id,为全局id,用于填充于RegistedDictionary中
-			StringDictionary content = new StringDictionary();
-			content.Add("HP", "100");
-			content.Add("Infos", "很牛逼的发射器");
-			RegistRegistType("PartyWeapon");
-            Regist("PartyWeapon", "Dispener",content);
+            StringDictionary content = new StringDictionary();
+            content.Add("HP", "100");
+            content.Add("Infos", "很牛逼的发射器");
+            RegistRegistType("PartyWeapon");
+            Regist("PartyWeapon", "Dispener", content);
             PrintAllRegisted();
             Debug.Out("Registed.");
         }
@@ -32,50 +32,50 @@ namespace PVZGDFrame
         {
             StringDictionary dic = new StringDictionary();
             dic.Add("Name", name);
-			dic.Union(content).ToDictionary(k => k.Key, v => v.Value);
-            Debug.Out<String,String>(dic);
-			RegistedDictionary[type].Add(dic);
-			return RegistedDictionary[type].Count - 1;
+            dic.Union(content).ToDictionary(k => k.Key, v => v.Value);
+            Debug.Out<String, String>(dic);
+            RegistedDictionary[type].Add(dic);
+            return RegistedDictionary[type].Count - 1;
         }
         #region 格子相关
         //注册格子类型
         public void DoRegistGridTypeVanilla()
-		{
-			RegistRegistType("GridType");
-			GridType.Normal = RegistGridType("Normal");
-			GridType.Water = RegistGridType("Water");
-			GridType.Lava = RegistGridType("Lava");
-		}
+        {
+            RegistRegistType("GridType");
+            GridType.Normal = RegistGridType("Normal");
+            GridType.Water = RegistGridType("Water");
+            GridType.Lava = RegistGridType("Lava");
+        }
 
         public int RegistGridType(String name)
-		{
-			int length = RegistedDictionary["GridType"].Count;
-			RegistedDictionary["GridType"].Add(name);
-			return length;
-		}
-		public void RegistRegistType(String name)
-		{
-			RegistedDictionary.Add(name, new ArrayList());
-		}
-		#endregion
+        {
+            int length = RegistedDictionary["GridType"].Count;
+            RegistedDictionary["GridType"].Add(name);
+            return length;
+        }
+        public void RegistRegistType(String name)
+        {
+            RegistedDictionary.Add(name, new ArrayList());
+        }
+        #endregion
 
-		public void PrintAllRegisted()
-		{
-			Debug.Out<String,ArrayList>(RegistedDictionary);
-		}
-		public class GridType
-		{
-			public int type = Normal;
-			static public int Normal;
-			static public int Water;
-			static public int Lava;
-		}
-		public class HurtType
-		{
-			public int type = Normal;
-			static public int Normal;
-			static public int Fire;
-			static public int Watering;
-		}
+        public void PrintAllRegisted()
+        {
+            Debug.Out<String, ArrayList>(RegistedDictionary);
+        }
+        public class GridType
+        {
+            public int type = Normal;
+            static public int Normal;
+            static public int Water;
+            static public int Lava;
+        }
+        public class HurtType
+        {
+            public int type = Normal;
+            static public int Normal;
+            static public int Fire;
+            static public int Watering;
+        }
     }
 }

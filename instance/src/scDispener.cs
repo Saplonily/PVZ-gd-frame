@@ -9,5 +9,8 @@ namespace PVZGDFrame
         {
             
         }
+        public override void _Input(InputEvent inputEvent)
+        {
+        }
     }
 }
