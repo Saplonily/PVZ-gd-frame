@@ -6,7 +6,7 @@ using Godot.Collections;
 
 namespace PVZGDFrame
 {
-	public class Entity2D : Node2D
+	public class Entity : Node2D
 	{
 		//重力源
 		//一个属于mBoard的Object中的gravity_source

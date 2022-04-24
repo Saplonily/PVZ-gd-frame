@@ -10,14 +10,17 @@ using System.Linq;
 namespace PVZGDFrame
 {
     using StringDictionary = Dictionary<String, String>;
-    public class Register
+    public partial class Register
     {
         //注册总列表
         public Dictionary<String, ArrayList> RegistedDictionary = new Dictionary<string, ArrayList>();
         public Register()
         {
             Debug.Out("Regist all information now.");
+
+            Debug.Out("Regist Vanilla GridType now...");
             DoRegistGridTypeVanilla();
+
             //这里会放置一个函数API用于注册mod物品
             //注册成功返回一个id,为全局id,用于填充于RegistedDictionary中
             StringDictionary content = new StringDictionary();
@@ -25,8 +28,10 @@ namespace PVZGDFrame
             content.Add("Infos", "很牛逼的发射器");
             RegistRegistType("PartyWeapon");
             Regist("PartyWeapon", "Dispener", content);
+
+
             PrintAllRegisted();
-            Debug.Out("Registed.");
+            Debug.Out("Registe finished.");
         }
         public int Regist(String type, String name, StringDictionary content)
         {
@@ -37,39 +42,17 @@ namespace PVZGDFrame
             RegistedDictionary[type].Add(dic);
             return RegistedDictionary[type].Count - 1;
         }
-        #region 格子相关
-        //注册格子类型
-        public void DoRegistGridTypeVanilla()
-        {
-            RegistRegistType("GridType");
-            GridType.Normal = RegistGridType("Normal");
-            GridType.Water = RegistGridType("Water");
-            GridType.Lava = RegistGridType("Lava");
-        }
-
-        public int RegistGridType(String name)
-        {
-            int length = RegistedDictionary["GridType"].Count;
-            RegistedDictionary["GridType"].Add(name);
-            return length;
-        }
+        
         public void RegistRegistType(String name)
         {
             RegistedDictionary.Add(name, new ArrayList());
         }
-        #endregion
 
         public void PrintAllRegisted()
         {
             Debug.Out<String, ArrayList>(RegistedDictionary);
         }
-        public class GridType
-        {
-            public int type = Normal;
-            static public int Normal;
-            static public int Water;
-            static public int Lava;
-        }
+        
         public class HurtType
         {
             public int type = Normal;

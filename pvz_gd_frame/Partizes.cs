@@ -4,7 +4,7 @@ using PVZGDFrame;
 using static PVZGDFrame.Register;
 namespace PVZGDFrame
 {
-    public class Partizes2D : Entity2D, IHurtable
+    public class Partizes : Entity, IHurtable
     {
         //可被分化派对的
         //即植物和僵尸这种可划分阵营的
