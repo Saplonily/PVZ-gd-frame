@@ -1,6 +1,7 @@
 using Godot;
 using System.Linq;
 using Godot.Collections;
+using PVZGDFrame;
 //一般的实体
 //包括钱币,僵尸,植物,障碍物等
 

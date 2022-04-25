@@ -1,0 +1,73 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://pvz_gd_frame/Overlay/UIProcessable.cs" type="Script" id=1]
+[ext_resource path="res://instance/src/scDispener.tscn" type="PackedScene" id=2]
+[ext_resource path="res://instance/src/GridNormal.tscn" type="PackedScene" id=3]
+[ext_resource path="res://pvz_gd_frame/Board/mBoard.cs" type="Script" id=4]
+[ext_resource path="res://pvz_gd_frame/Board/PlayerProcesser.cs" type="Script" id=5]
+
+[node name="mBoard" type="Node2D" groups=["mBoard"]]
+script = ExtResource( 4 )
+
+[node name="PlayerProcesser" type="Node" parent="."]
+script = ExtResource( 5 )
+
+[node name="Grids" type="Node2D" parent="."]
+position = Vector2( 320, 256 )
+
+[node name="GridNormal4" parent="Grids" groups=["Grids"] instance=ExtResource( 3 )]
+position = Vector2( 224, 32 )
+
+[node name="GridNormal14" parent="Grids" groups=["Grids"] instance=ExtResource( 3 )]
+position = Vector2( 96, 160 )
+
+[node name="GridNormal5" parent="Grids" groups=["Grids"] instance=ExtResource( 3 )]
+position = Vector2( 288, 32 )
+
+[node name="GridNormal11" parent="Grids" groups=["Grids"] instance=ExtResource( 3 )]
+position = Vector2( 288, 160 )
+
+[node name="GridNormal12" parent="Grids" groups=["Grids"] instance=ExtResource( 3 )]
+position = Vector2( 224, 160 )
+
+[node name="GridNormal13" parent="Grids" groups=["Grids"] instance=ExtResource( 3 )]
+position = Vector2( 160, 160 )
+
+[node name="GridNormal10" parent="Grids" groups=["Grids"] instance=ExtResource( 3 )]
+position = Vector2( 288, 96 )
+
+[node name="GridNormal8" parent="Grids" groups=["Grids"] instance=ExtResource( 3 )]
+position = Vector2( 160, 96 )
+
+[node name="GridNormal7" parent="Grids" groups=["Grids"] instance=ExtResource( 3 )]
+position = Vector2( 96, 96 )
+
+[node name="GridNormal" parent="Grids" groups=["Grids"] instance=ExtResource( 3 )]
+position = Vector2( 32, 32 )
+
+[node name="GridNormal6" parent="Grids" groups=["Grids"] instance=ExtResource( 3 )]
+position = Vector2( 32, 96 )
+
+[node name="GridNormal3" parent="Grids" groups=["Grids"] instance=ExtResource( 3 )]
+position = Vector2( 160, 32 )
+
+[node name="GridNormal9" parent="Grids" groups=["Grids"] instance=ExtResource( 3 )]
+position = Vector2( 224, 96 )
+
+[node name="GridNormal15" parent="Grids" groups=["Grids"] instance=ExtResource( 3 )]
+position = Vector2( 32, 160 )
+
+[node name="GridNormal2" parent="Grids" groups=["Grids"] instance=ExtResource( 3 )]
+position = Vector2( 96, 32 )
+
+[node name="Entities" type="Node" parent="."]
+
+[node name="scDispener" parent="Entities" instance=ExtResource( 2 )]
+position = Vector2( 352, 288 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 256.0
+margin_bottom = 128.0
+
+[node name="UI" type="Node2D" parent="."]
+script = ExtResource( 1 )

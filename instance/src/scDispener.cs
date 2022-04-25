@@ -3,7 +3,7 @@ using System;
 
 namespace PVZGDFrame
 {
-    public class scDispener : Partizes2D
+    public class scDispener : Partizes
     {
         public override void _Ready()
         {
@@ -11,6 +11,7 @@ namespace PVZGDFrame
         }
         public override void _Input(InputEvent inputEvent)
         {
+            
         }
     }
 }

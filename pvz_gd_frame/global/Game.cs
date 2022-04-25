@@ -12,6 +12,14 @@ namespace PVZGDFrame
         {
             register = new Register();
             mBoard = GetNode<mBoard>("/root/mBoard");
+            if(mBoard == null)
+            {
+                throw new mBoardNotFoundException("LevelBoard not found.");
+            }
         }
+    }
+    class mBoardNotFoundException : ApplicationException
+    {
+        public mBoardNotFoundException(string msg): base(msg){}
     }
 }

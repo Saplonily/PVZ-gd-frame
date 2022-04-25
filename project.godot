@@ -11,12 +11,12 @@ config_version=4
 [application]
 
 config/name="PVZ_gd_frame"
-run/main_scene="res://instance/assets/MainScene.tscn"
+run/main_scene="res://instance/src/MainScene.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-Game="res://pvz_gd_frame/Game.cs"
+Game="*res://pvz_gd_frame/Global/Game.cs"
 
 [layer_names]
 
@@ -27,7 +27,7 @@ Game="res://pvz_gd_frame/Game.cs"
 2d_physics/layer_5="PartyPositive"
 2d_physics/layer_6="PartyNegative"
 2d_physics/layer_7="PartyMiddle"
-2d_physics/layer_33="erterwtewte"
+2d_physics/layer_33=""
 
 [locale]
 

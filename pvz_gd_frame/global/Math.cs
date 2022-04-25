@@ -18,7 +18,7 @@ namespace PVZGDFrame
         {
             return (A<B)?A:B;
         }
-        public static float 
+        public static Random random = new Random();
         
 
     }

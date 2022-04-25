@@ -22,7 +22,7 @@ RegistedDictionary:
         {
             "Name":"Obsidian","HP":8000,"Attributes":[
                 {"Name":"Hard"},
-                {"Name":"MuiltiHP","Includes":[{"Name":"Ultimate","Value":16000},{}]}
+                {"Name":"MuiltiHP","Includes":[{"Name":"Ultimate","Value":16000}]}
             ]
         },
         {
@@ -45,7 +45,14 @@ RegistedDictionary:
             "Name":
         }
     ]
+
+    "Parties":
+    [
+        "Weapon",
+        "Enemies"
+        
     ]
+    
     
 
 

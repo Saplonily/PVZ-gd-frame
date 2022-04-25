@@ -1,7 +1,7 @@
 using System;
 namespace PVZGDFrame
 {
-    class Register
+    public partial class Register
     {
         public class GridType
         {
@@ -10,7 +10,6 @@ namespace PVZGDFrame
             static public int Water;
             static public int Lava;
         }
-
         public int RegistGridType(String name)
         {
             int length = RegistedDictionary["GridType"].Count;

@@ -16,14 +16,14 @@ namespace PVZGDFrame
 		}
 		public override void _Process(float delta)
 		{
-			var _a = delta;
-			handle_buffer();
+			_ = delta;
+			HandleBuffer();
 		}
 		//进行缓冲区处理
 		//TODO
-		public void handle_buffer()
+		public void HandleBuffer()
 		{
-		
+			
 		}
 	}
 }

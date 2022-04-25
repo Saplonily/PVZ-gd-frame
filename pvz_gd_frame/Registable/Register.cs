@@ -12,8 +12,13 @@ namespace PVZGDFrame
     using StringDictionary = Dictionary<String, String>;
     public partial class Register
     {
-        //注册总列表
+        /// <summary>
+        /// 注册总列表
+        /// </summary>
         public Dictionary<String, ArrayList> RegistedDictionary = new Dictionary<string, ArrayList>();
+        /// <summary>
+        ///构造函数
+        /// </summary>
         public Register()
         {
             Debug.Out("Regist all information now.");
@@ -21,7 +26,6 @@ namespace PVZGDFrame
             Debug.Out("Regist Vanilla GridType now...");
             DoRegistGridTypeVanilla();
 
-            //这里会放置一个函数API用于注册mod物品
             //注册成功返回一个id,为全局id,用于填充于RegistedDictionary中
             StringDictionary content = new StringDictionary();
             content.Add("HP", "100");
@@ -33,6 +37,9 @@ namespace PVZGDFrame
             PrintAllRegisted();
             Debug.Out("Registe finished.");
         }
+        /// <summary>
+        /// 注册一个类型,返回此类型id,失败为-1,一般原因为重名
+        /// </summary>
         public int Regist(String type, String name, StringDictionary content)
         {
             StringDictionary dic = new StringDictionary();
@@ -42,10 +49,20 @@ namespace PVZGDFrame
             RegistedDictionary[type].Add(dic);
             return RegistedDictionary[type].Count - 1;
         }
-        
-        public void RegistRegistType(String name)
+        /// <summary>
+        /// 注册一个可以被注册的类型...(返回是否成功,一般为否的原因是已被注册)
+        /// </summary>
+        public bool RegistRegistType(String name)
         {
-            RegistedDictionary.Add(name, new ArrayList());
+            if (!RegistedDictionary.ContainsKey(name))
+            {
+                RegistedDictionary.Add(name, new ArrayList());
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public void PrintAllRegisted()

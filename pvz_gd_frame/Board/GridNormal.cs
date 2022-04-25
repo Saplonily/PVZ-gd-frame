@@ -46,8 +46,8 @@ namespace PVZGDFrame
 			SprPlaceable.Visible = false;
 			SprUnplaceable.Visible = false;
 			//绑定进入事件
-			var _a = Area.Connect("mouse_entered",this,"MouseEntered");
-			_a = Area.Connect("mouse_exited",this,"MouseExited");
+			_ = Area.Connect("mouse_entered",this,"MouseEntered");
+			_ = Area.Connect("mouse_exited",this,"MouseExited");
 
 		}
 		private void MouseEntered()
