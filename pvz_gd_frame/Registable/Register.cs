@@ -24,16 +24,7 @@ namespace PVZGDFrame
             Debug.Out("Regist all information now.");
 
             Debug.Out("Regist Vanilla GridType now...");
-            DoRegistGridTypeVanilla();
-
-            //注册成功返回一个id,为全局id,用于填充于RegistedDictionary中
-            StringDictionary content = new StringDictionary();
-            content.Add("HP", "100");
-            content.Add("Infos", "很牛逼的发射器");
-            RegistRegistType("PartyWeapon");
-            Regist("PartyWeapon", "Dispener", content);
-
-
+            DoRegistVanilla();
             PrintAllRegisted();
             Debug.Out("Registe finished.");
         }
@@ -51,7 +42,7 @@ namespace PVZGDFrame
         }
         /// <summary>
         /// 注册一个可以被注册的类型...(返回是否成功,一般为否的原因是已被注册)
-        /// </summary>
+        /// <summary>
         public bool RegistRegistType(String name)
         {
             if (!RegistedDictionary.ContainsKey(name))
@@ -68,14 +59,6 @@ namespace PVZGDFrame
         public void PrintAllRegisted()
         {
             Debug.Out<String, ArrayList>(RegistedDictionary);
-        }
-        
-        public class HurtType
-        {
-            public int type = Normal;
-            static public int Normal;
-            static public int Fire;
-            static public int Watering;
         }
     }
 }

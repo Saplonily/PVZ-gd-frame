@@ -8,7 +8,7 @@ namespace PVZGDFrame
     {
         static public void Out(String text)
         {
-            GD.Print("[Info ]",text);
+            GD.Print("[Info]",text);
         }
         static public void Out<T1,T2>(Dictionary<T1,T2> dic)
         {

@@ -16,6 +16,7 @@ namespace PVZGDFrame
 			get;
 			set;
 		}
+		public bool UIDisabled = false;
 		public override void _Ready()
 		{
 			PlayerProcesser = GetNode<Node>("PlayerProcesser");
@@ -24,6 +25,7 @@ namespace PVZGDFrame
 		public override void _Process(float delta)
 		{
 			DebugLabel.Text = $"fps: {Engine.GetFramesPerSecond()} \ndelta: {delta}";
+			
 		}
 	}
 }

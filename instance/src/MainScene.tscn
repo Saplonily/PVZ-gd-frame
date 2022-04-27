@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://pvz_gd_frame/Overlay/UIProcessable.cs" type="Script" id=1]
 [ext_resource path="res://instance/src/scDispener.tscn" type="PackedScene" id=2]
 [ext_resource path="res://instance/src/GridNormal.tscn" type="PackedScene" id=3]
 [ext_resource path="res://pvz_gd_frame/Board/mBoard.cs" type="Script" id=4]
 [ext_resource path="res://pvz_gd_frame/Board/PlayerProcesser.cs" type="Script" id=5]
+[ext_resource path="res://instance/src/Card.tscn" type="PackedScene" id=6]
 
 [node name="mBoard" type="Node2D" groups=["mBoard"]]
 script = ExtResource( 4 )
@@ -71,3 +72,6 @@ margin_bottom = 128.0
 
 [node name="UI" type="Node2D" parent="."]
 script = ExtResource( 1 )
+
+[node name="Card" parent="UI" instance=ExtResource( 6 )]
+position = Vector2( 184, 152 )

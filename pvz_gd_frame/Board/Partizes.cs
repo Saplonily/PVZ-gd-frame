@@ -10,7 +10,7 @@ namespace PVZGDFrame
         //即植物和僵尸这种可划分阵营的
         public float health = 200.0f;
         public float maxHealth = 200.0f;
-        
+
 
         [Signal]
         delegate void Died(Node Target);
@@ -24,7 +24,7 @@ namespace PVZGDFrame
         public void Die()
         {
             Health = 0;
-            EmitSignal("Died",this);
+            EmitSignal(nameof(Died),this);
         }
 
         public void Hurt(HurtType hurtType,float value)

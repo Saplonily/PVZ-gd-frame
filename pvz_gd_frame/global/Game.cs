@@ -6,6 +6,7 @@ namespace PVZGDFrame
 {
     class Game : Node
     {
+        static public Game game;
         public Register register;
         public mBoard mBoard;
         public override void _Ready()
@@ -14,12 +15,9 @@ namespace PVZGDFrame
             mBoard = GetNode<mBoard>("/root/mBoard");
             if(mBoard == null)
             {
-                throw new mBoardNotFoundException("LevelBoard not found.");
+                GD.PrintErr("mBoard is null");
             }
+            game = this;
         }
-    }
-    class mBoardNotFoundException : ApplicationException
-    {
-        public mBoardNotFoundException(string msg): base(msg){}
     }
 }

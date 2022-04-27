@@ -46,21 +46,21 @@ namespace PVZGDFrame
 			SprPlaceable.Visible = false;
 			SprUnplaceable.Visible = false;
 			//绑定进入事件
-			_ = Area.Connect("mouse_entered",this,"MouseEntered");
-			_ = Area.Connect("mouse_exited",this,"MouseExited");
+			_ = Area.Connect("mouse_entered",this,nameof(MouseEntered));
+			_ = Area.Connect("mouse_exited",this,nameof(MouseExited));
 
 		}
 		private void MouseEntered()
 		{
 			if (Type==Register.GridType.Normal)
 			{
-				EmitSignal("OnReadyPlace");
+				EmitSignal(nameof(OnReadyPlace));
 				SprPlaceable.Visible = true;
 			}
 		}
 		private void MouseExited()
 		{
-			EmitSignal("OffReadyPlace");
+			EmitSignal(nameof(OffReadyPlace));
 			SprPlaceable.Visible = false;
 		}
 	}
